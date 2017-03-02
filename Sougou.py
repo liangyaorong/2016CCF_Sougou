@@ -320,7 +320,7 @@ if __name__ == "__main__":
         clf5 = LogisticRegression(C = 10)
 
         # eclf = clf1
-        eclf = VotingClassifier(estimators=[('lsvc', clf2),('MNB', clf4),('BNB', clf3)], voting='hard', n_jobs=-1)
+        eclf = VotingClassifier(estimators=[('lsvc', clf2),('MNB', clf4),('BNB', clf3),('LR',clf5)], voting='hard', n_jobs=-1)
         eclf.fit(counted_train_data, np.array(classify))
         pred = eclf.predict(counted_test_data)
 
