@@ -7,7 +7,7 @@
 jieba分词，然后根据停用词表去掉高频率词<br>
 <br>
 特征工程<br>
-Word2Vet，TF-IDF加权，chi-square选取前二十万维特征（尝试过对词做组间组内方差加权，效果不好）<br>
+词袋模型，TF-IDF加权，chi-square选取前二十万维特征（尝试过对词做组间组内方差加权，效果不好）<br>
 <br>
 模型<br>
 线性SVC,BernoulliNB,MultinomialNB,逻辑回归四模型分别预测然后Voting<br>
