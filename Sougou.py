@@ -292,15 +292,15 @@ if __name__ == "__main__":
         # test_data = hstack([test_word_matrix])
 
 
-        # #tf-idf
-        # transformer = TfidfTransformer()
-        # tfidf_train_data = transformer.fit_transform(counted_train_data)
-        # tfidf_test_data = transformer.transform(counted_test_data)
+        #tf-idf
+        transformer = TfidfTransformer()
+        tfidf_train_data = transformer.fit_transform(counted_train_data)
+        tfidf_test_data = transformer.transform(counted_test_data)
 
-        # #特征选取
-        # selector = SelectKBest(chi2, k='all')
-        # selected_train_data = selector.fit_transform(tfidf_train_data,classify)
-        # selected_test_data = selector.transform(tfidf_test_data)
+        #特征选取
+        selector = SelectKBest(chi2, k=200000）
+        selected_train_data = selector.fit_transform(tfidf_train_data,classify)
+        selected_test_data = selector.transform(tfidf_test_data)
 
 
 
